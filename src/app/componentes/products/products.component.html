@@ -1,0 +1,17 @@
+<section id="products">
+    <h1>Productos</h1>
+    <div *ngFor = "let item of items_productos" class="categorias">
+        <h3>{{item.categoria}}</h3>
+        <div class="row" id="container">
+            <div *ngFor = "let producto of item.productos" class="subcontainer col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                <div class="product">
+                    <img src="{{producto.img}}" alt="">
+                    <h6>{{producto.nombre}}</h6>
+                    <span>color: {{producto.color}}</span><br>
+                    <span>precio: {{producto.precio}}</span><br>
+                    <span>talla: {{producto.talla}}</span><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

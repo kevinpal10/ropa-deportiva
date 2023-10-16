@@ -1,0 +1,95 @@
+ 
+#navTitle{
+	padding-top: 20px;
+}
+
+#navTitle h1{
+	text-align: center;
+	font-family: 'Arima Madurai', cursive;
+	color: rgba(235, 111, 28, 0.918);
+}
+
+#navBar ul {
+	padding-right: 10px;
+	padding: 0px;	
+}
+
+#navBar ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 0 20px;	
+	position: relative;
+}
+
+#navBar{
+	text-align: center;
+	padding-top: 20px;
+}
+
+#navBar ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 1.2rem;
+}
+
+#navBar ul li a:hover{
+	color: rgb(110, 169, 247);
+}
+
+
+#navBar ul li::before{
+	content: "";
+	height: 3px;
+	width: 0%;
+	background-color: rgb(53, 134, 240);
+	position: absolute;
+	bottom: -12px;
+	transition: 0.4s ease-out;
+}
+
+#navBar ul li:hover::before{
+	width: 100%;
+}
+
+
+@media (max-width: 780px) {
+
+	#navTitle h1{
+		font-size: medium;
+		margin-bottom: 0px;
+	}
+ 
+	#navTitle{
+		padding: 5px;
+	}
+
+	#navBar ul{
+		margin: 10px 0px;
+	}
+
+	#navBar ul a{
+		font-size: x-small !important;
+	}
+
+	#navBar li{
+		margin: 0px 5px;
+		display: inline-block;
+		padding: 0px 10px !important;	
+		position: relative;
+	}
+
+	#navBar a{
+		font-size: 12px !important;
+	}
+
+	#navBar{
+		padding: 0px;
+		text-align: center;
+	}
+
+	#navTitle h1{
+		margin-top: 10%!important;
+		font-size: 35px;
+	}
+}
