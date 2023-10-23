@@ -5,6 +5,26 @@ footer{
     padding-bottom: 10px;
 }
 
+footer h3{
+	padding: 10px;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+	color: white;
+}
+
+footer h4{
+	color: #fff;
+	width: 100%;
+	font-family: 'Arima Madurai';
+	text-align: center;
+	padding-left: 15px;
+	font-size: 15px;
+}
+
+footer #container{
+	width: 100%;
+}
+
 footer h6{
 	width: 100%;
 	text-align: center;
@@ -18,13 +38,27 @@ footer h6 a{
 	text-decoration: none;
 }
 
-.finalidad{
-	color: #fff;
-	width: 100%;
-	min-width: 24%;
-	font-family: 'Balsamiq Sans', cursive;
-	text-align: left;
+
+
+footer #container .redes{
+	display: flex;
+	align-items: center;
 }
+
+footer #container .redes .info{
+	font-size: 12px;
+}
+
+footer #container .redes .container-redes{
+	text-align: center;
+	width: 100%;
+}
+
+footer #container .redes .info ul li{
+	list-style: none;
+	color: #fff;
+}
+
 
 
 .develop{ 
@@ -87,6 +121,66 @@ section #services {
 	text-align: center;
   }
 
+
+  /* Formulario */
+
+footer #container .formulario{
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+} 
+  
+.container-formulario {
+	margin: 0 auto;
+	width: 60%;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+}
+
+
+.form-group {
+	margin-bottom: 5px;
+}
+
+label {
+	display: block;
+}
+
+input[type="text"], input[type="tel"], input[type="number"], textarea {
+	width: 100%;
+	padding: 5px;
+	margin-top: 2px;
+	margin-bottom: 4px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+}
+
+input[type="text"]::placeholder, input[type="tel"]::placeholder, input[type="number"]::placeholder, textarea::placeholder {
+	color: rgb(97, 97, 97);
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="number"]:focus, textarea:focus {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.submit-btn {
+	width: 100%;
+	background-color: #3498db;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submit-btn:hover {
+	background-color: #2980b9;
+}
+  /* fin formulario */
+
   @media (max-width: 780px) {
 
     section ul{
@@ -118,5 +212,28 @@ section #services {
 
 	#footer h4{
 		font-size: 16px;
+	}
+
+	footer #container .formulario{
+		font-size: 8px;
+	} 
+
+	.container-formulario {
+		width: 90%;
+		padding: 10px;
+	}
+
+	input[type="text"], input[type="tel"], input[type="number"], textarea {
+		margin-top: 1px;
+		margin-bottom: 2px;
+	}
+
+	footer #container .redes .info{
+		font-size: 8px;
+	}
+
+	
+	h4{
+		font-size: 10px !important;
 	}
   }

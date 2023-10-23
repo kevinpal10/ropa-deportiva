@@ -1,59 +1,103 @@
  
-#encabezado{
+#inicio{
 	padding: 20px;
-	background-image: url("https://images.unsplash.com/photo-1566778938552-2af3eb48016d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
-	background-size: cover;
+	/* background-image: url("https://images.unsplash.com/photo-1566778938552-2af3eb48016d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"); */
+	background-image: url("https://i.pinimg.com/originals/fe/b6/54/feb654c86f9d4da89aef60d644418fc0.png");
+	background-size: cover !important;
 	background-attachment: fixed;
 	width: 100%;
-	height: 100vh;
+	height: 100vh; 
+
 }
 
-#encabezado #texto{
-	margin-top: 15% !important;
+#inicio .container-text {
+	width: 100%;
+	height: 85%;
+	display: flex;
+	align-items: center;
+}
+
+#inicio #texto{
 	font-family: 'Orbitron', sans-serif;
 }
 
-#encabezado #texto h1{
+#inicio #texto h1{
 	text-align: center;
+	width: 100%;
 	font-size: 100px;
 	color: rgb(73, 140, 241);
 }
 
-#encabezado #texto h3{
+#inicio #texto h3{
 	text-align: center;
 	font-size: 40px;
 	color: rgb(162, 195, 244);
 }
 
+#inicio #texto .button{
+	text-align: right;
+	padding: 50px;
+}
+
+#inicio #texto .button a{
+	text-align: center;
+	text-decoration: none !important;
+	background-color: rgba(240, 255, 255, 0.175);
+	border-radius: 5px;
+	padding: 15px 30px;
+	color: rgb(34, 34, 34);
+}
+
+#inicio #texto .button a:hover{
+	color: white;
+	background-color: rgba(0, 0, 0, 0.167);
+}
+
 @media (max-width: 780px) {
 
-	#encabezado{
-		background-image: url("https://images.unsplash.com/photo-1646837651873-bd4414977e17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80");
+	#inicio{
+		/* background-image: url("https://images.unsplash.com/photo-1646837651873-bd4414977e17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"); */
+		background-image: url("https://i.pinimg.com/originals/ba/55/00/ba550090f6f4f976ac4049db60043744.png");
 		height: 100vh !important;
 		background-position: center;
 		padding: 0px 20px 20px 20px;
 	}
 
-	#encabezado p{
+	#inicio p{
 		font-size: x-small;
 	}
 
 
-	#encabezado #texto h1{
+	#inicio #texto h1{
 		font-size: 35px;
-		line-height: 50vh;
+		margin: 0px !important;
 		/*color: rgb(114, 163, 237);*/
 		font-weight: 700;
-		color: rgba(146, 89, 58, 0.918);
+		color: rgba(238, 193, 187, 0.918);
 	}	
 
-	#encabezado #texto h3{
+	#inicio #texto h3{
 		font-size: 15px;
-		margin-top: -23vh;
 		/*color: #4364b7;*/
 		font-weight: 800;
-		color: rgba(114, 63, 31, 0.918);
-
+		color: rgba(251, 251, 251, 0.918);
 	}	
+
+	#inicio #texto .button{
+		text-align: center;
+		padding: 20px;
+	}
+
+	#inicio #texto h3{
+		margin-top: 5px;
+		font-size: 12px;
+	}
+
+	#inicio #texto .button a{
+		padding: 10px 25px;
+		font-size: 13px;
+		background-color:rgba(240, 255, 255, 0.259);
+
+	}
 
 }

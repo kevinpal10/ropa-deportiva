@@ -1,38 +1,41 @@
 #products{
-    height: auto;
     width: 100%;
     /* background-color: rgba(245, 245, 220, 0.474); */
     /* background-image: url("https://images.unsplash.com/photo-1485256807238-97782da2fa07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"); */
     background-color: rgba(255, 228, 196, 0.297);
-
 }
 
 #products h1{
     text-align: center;
     padding: 1%;
     margin-bottom: 0px;
+	font-family: 'Orbitron', sans-serif;
 }
+
 
 #products .categorias{
-    align-content: center;
+    /*background-color: aquamarine;*/
+    width: 100%;
+    padding: 10px;
 }
-
+ 
 #products .categorias #container{
     /*background-color: aquamarine;*/
-    padding: 10px 60px;
     width: 100%;
-    text-align: center;
+    margin-left: 1px;
 }
 
 #products .categorias #container .subcontainer{
     padding: 5px;
-}
 
+}
 
 #products .categorias h3{
     margin-left: 4%;
     padding: 5px;
     margin-bottom: 0px;
+	font-family: 'Arima Madurai';
+    color: rgb(0, 0, 0);
 }
 
 #products .categorias #container .product{
@@ -41,38 +44,149 @@
     border: 1px rgb(151, 151, 151) groove;
     border-radius: 10px;
     background-size: cover;
-    opacity: 0.9;
-    background-color: rgba(255, 252, 252, 0.625);
+    background-color: rgba(242, 240, 240, 0.536);
 
 }
 
 #products .categorias #container .product:hover{
-    opacity: 1;
+    background-color: white ;
 }
 
 #products .categorias #container .product img{
     width: 100%;
-}
-#products .categorias #container .product h6{
-    margin-bottom: 0px;
+    border-radius: 5px;
+    height: 230px;
 }
 
-#products .categorias #container .product span{
-    font-size: 12px;
+#products .categorias #container .subcontainer .product h6{
+    margin-bottom: 0px;
+    text-align: center;
 }
+
+#products .categorias #container .subcontainer .product ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+#products .categorias #container .subcontainer .product ul li{
+    font-size: 12px;
+    list-style: none;
+}
+
+.search{
+    width: 99%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search .group {
+    display: flex;
+    width: 35%;
+    align-items: center;
+    margin: 10px 0px;
+    position: relative;
+}
+   
+.search .group .input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fff;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+   
+.input::placeholder {
+    color: #9e9ea7;
+}
+   
+.input:focus, input:hover {
+    outline: none;
+    border-color: rgba(56, 86, 236, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(110, 76, 234, 0.1);
+}
+   
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+   
+   
+#imagen_modal{
+    max-height: 450px;
+    max-width: 350px;
+} 
+
+
+    
+   
 
 @media (max-width: 570px) {
 
+    .search{
+        width: 99%;
+        justify-content: center;
+    }
+
+    .search .group {
+        width: 90%;
+        margin: 5px 0px;
+    }
+    
+    .search .group .input {
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .icon {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+
 	#products .categorias #container .subcontainer{
-		align-items: center;
 		width: 33%;
 	}
 
     #products .categorias #container{
         /*background-color: aquamarine;*/
-        padding: 10px 20px;
+        padding: 10px 2px;
         width: 100%;
+    }
+
+    #products .categorias #container .subcontainer .product h6{
+        font-size: 12px;
         text-align: center;
     }
 
+    #products .categorias #container .subcontainer .product ul li{
+        font-size: 9px;
+        text-align: left;
+    }
+    
+    #products .categorias #container .product{
+        padding: 5px;
+    }
+
+    #products .categorias #container .product img{
+        height: 140px;
+    }
+
+    #products .categorias h3{
+        margin-left: 1%;
+    }
+
+    #products .categorias{
+        padding: 5px;
+    }
 }
+

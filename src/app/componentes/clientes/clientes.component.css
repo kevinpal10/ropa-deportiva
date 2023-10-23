@@ -1,0 +1,77 @@
+#clientes{
+    width: 99%;
+    padding: 1%;
+}
+
+#clientes h3{
+    padding: 10px;
+    text-align: center;
+	font-family: 'Orbitron', sans-serif;
+}
+
+#clientes #container{
+    width: 100%;
+}
+
+#clientes #container #subcontainer {
+    padding: 10px;
+}
+
+#clientes #container #subcontainer #box{
+    border: 1px groove rgba(110, 110, 110, 0.549);
+    border-radius: 5px;
+    background-color: rgba(154, 255, 255, 0.127);
+    padding: 20px;
+}
+
+#clientes #container #subcontainer #box .imagen img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#clientes #container #subcontainer #box .comment{
+    display: flex;
+    align-items: center;
+}
+
+#clientes #container #subcontainer #box .comment p{
+    margin: 0px;
+}
+
+@media (max-width: 570px) {
+    #clientes {
+        padding: 5px;
+    }
+
+    #clientes #container #subcontainer{
+        width: 50%;
+        padding: 5px !important;
+    }
+
+    #clientes #container #subcontainer #box{
+        padding: 10px;
+        padding: 5px;
+    }
+
+    #clientes #container #subcontainer #box .comment{
+        width: 60%;
+        padding: 0px 5px;
+    }
+
+    #clientes #container #subcontainer #box .comment p{
+        font-size: 10px;
+    }
+
+    #clientes #container #subcontainer #box .imagen{
+        text-align: center;
+        padding: 2px;
+        width: 40%;
+    }
+
+    #clientes #container #subcontainer #box .imagen img{
+        width: 90%;
+        text-align: center;
+        margin-left: 7px;
+    }
+    
+ }

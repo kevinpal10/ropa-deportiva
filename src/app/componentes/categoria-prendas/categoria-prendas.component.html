@@ -1,0 +1,16 @@
+<section class="categoria-prendas">
+    <h3>Productos</h3>
+    <div class="container-box">
+        <div class="container">
+            <div  *ngFor = "let prenda of categorias_prendas" id="hobbies-img">
+                <img src="{{prenda.img}}"  alt="">
+                <div class="hover-hobbies">
+                    <a href={{prenda.src}}>
+                        <span>{{prenda.name}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+</section>

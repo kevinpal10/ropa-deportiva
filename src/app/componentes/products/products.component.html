@@ -1,17 +1,41 @@
 <section id="products">
     <h1>Productos</h1>
-    <div *ngFor = "let item of items_productos" class="categorias">
+
+    <div class="search">
+        <div class="group">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+            <input placeholder="Search" type="search" class="input">
+        </div>
+    </div>
+
+    <nz-tabset nzCentered>
+        <nz-tab nzTitle="Todo" (nzClick)="changeDates('t')"></nz-tab>
+        <nz-tab nzTitle="Hombre" (nzClick)="changeDates('h')"></nz-tab>
+        <nz-tab nzTitle="Mujer" (nzClick)="changeDates('m')"></nz-tab>
+        <nz-tab nzTitle="Niño/a" (nzClick)="changeDates('n')"></nz-tab>
+    </nz-tabset>
+      
+    <div *ngFor = "let item of productos_aux" class="categorias">
         <h3>{{item.categoria}}</h3>
-        <div class="row" id="container">
-            <div *ngFor = "let producto of item.productos" class="subcontainer col-lg-2 col-md-3 col-sm-3 col-xs-12">
+        <div  class="row"  id="container">
+            <div (click)="showModal(producto)" *ngFor = "let producto of item.productos" class="subcontainer col-lg-2 col-md-3 col-sm-3 col-xs-12">
                 <div class="product">
-                    <img src="{{producto.img}}" alt="">
+                    <img src="{{producto.img}}" alt="" >
                     <h6>{{producto.nombre}}</h6>
-                    <span>color: {{producto.color}}</span><br>
-                    <span>precio: {{producto.precio}}</span><br>
-                    <span>talla: {{producto.talla}}</span><br>
-                </div>
+                    <ul>
+                        <li>color: {{producto.color}}</li>
+                        <li>precio unidad: {{producto.precio}}</li>
+                        <li>precio negocio: {{producto.precio_neg}}</li>
+                        <li>talla: {{producto.talla}}</li>
+                        <li>color: {{producto.color}}</li>
+                    </ul>
+                </div> 
             </div>
         </div>
+        <nz-modal id="modal" [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+            <ng-container *nzModalContent >
+                <img id="imagen_modal" src="{{producto_modal.img}}" alt="">
+            </ng-container>
+        </nz-modal>
     </div>
 </section>

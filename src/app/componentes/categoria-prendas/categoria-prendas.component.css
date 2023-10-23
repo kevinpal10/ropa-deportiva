@@ -1,0 +1,129 @@
+.categoria-prendas{
+    /* height: 70vh; */
+    width: 99%;
+    padding: 1%;
+    margin-bottom: 1px;
+    background-color: rgba(250, 235, 215, 0.396);
+}
+
+.categoria-prendas .container-box .container{
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.categoria-prendas .container-box{
+    width: 100%;
+}
+
+.categoria-prendas #hobbies-img{
+	background-color: rgba(34, 99, 134, 0.452); 
+	/* height: 200px; */
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 0 3px 0 rgba(0,0,0, .5);
+	/* font-weight: 500; */
+	font-size: 13px !important;
+	text-align: justify;
+	color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 32.33%;
+    margin: 1%;
+}
+
+.categoria-prendas h3{
+    padding: 20px;
+    text-align: center;
+	font-family: 'Orbitron', sans-serif;
+}
+
+#hobbies-img .hover-hobbies{
+	font-size: 22px;
+    border-radius: 50%;
+}
+
+#hobbies-img{
+	/* height: 200px; */
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 0 3px 0 rgba(0,0,0, .5);
+	/* padding: 3px 3px; */
+}
+
+#hobbies-img > img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.hover-hobbies{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	transform: scale(0);
+	background: hsla(335, 91%, 27%, 0.7);
+	transition: transform .5s;
+	display:flex;
+	justify-content: center;
+	align-items: 	center;
+}
+
+.hover-hobbies a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.hover-hobbies a:hover{
+	color: rgb(73, 140, 241);
+}
+
+#hobbies-img:hover .hover-hobbies{
+	transform: scale(1);
+}
+
+@media (max-width: 500px) {
+
+    .categoria-prendas #hobbies-img{
+        width: 60%;
+    }
+
+    .categoria-prendas .container-box{
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 870px) {
+
+    .categoria-prendas #hobbies-img{
+        width: 60%;
+    }
+
+    .categoria-prendas .container-box{
+        text-align: center;
+        width: 100%;
+    }
+
+    .categoria-prendas .container-box .container{
+        padding: 10px;
+        width: 100%;
+    }
+
+    .categoria-prendas .container-box{
+        padding: 40px 10px;
+    }
+
+    .categoria-prendas #hobbies-img{
+        width: 100%;
+    }
+
+    
+    .hover-hobbies a:hover{
+        font-size: 12px;
+    }
+}

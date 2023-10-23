@@ -1,0 +1,20 @@
+<section id="clientes">
+    <h3>Nuestros clientes</h3>
+    <div class="row" id="container">
+        <div id="subcontainer" class="col-lg-4 col-md-4 col-sm-6 col-xs-6" *ngFor = "let comment of comments">
+            <div id="box" >
+                <div class="row">
+                    <div class="imagen col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <img src="{{comment.img}}" alt="">
+                    </div>
+                    <div class="comment col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                        <p>
+                            {{comment.comment}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
