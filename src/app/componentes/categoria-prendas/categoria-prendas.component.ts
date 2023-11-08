@@ -12,17 +12,17 @@ export class CategoriaPrendasComponent {
       // "img":"./assets/imagenes/img11.jpg",
       "img":"./assets/imagenes/categorias/resized_hoddie.jpg",
       "name":"Hoddies",
-      "src":"catalogo"
+      "src":"./#/catalogo"
     },
     {
       "img":"./assets/imagenes/categorias/resized_calentadores.jpg",
       "name":"Calentadores",
-      "src":"catalogo"
+      "src":"./#/catalogo"
     },
     { 
       "img":"./assets/imagenes/categorias/resized_buzos.jpg",
       "name":"Buzos",
-      "src":"catalogo"
+      "src":"./#/catalogo"
     }
   ]
 

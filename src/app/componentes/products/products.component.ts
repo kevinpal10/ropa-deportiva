@@ -13,52 +13,94 @@ export class ProductsComponent {
       "categoria": "Hombre",
       "productos": [
         {
-          "nombre": "Hoddie",
-          "precio_neg": 45.99,
-          "precio": 45.99,
+          "nombre": "Calentador para caballeros",
+          "precio_neg": 35,
+          "precio": 35,
           "color": "Blanco",
-          "talla": "M",
-          "img": "./assets/imagenes/img1.jpg"
+          "talla": "S-M-L",
+          "imgenes": [
+            "./assets/imagenes/hombres/img1.jpg",
+            "./assets/imagenes/hombres/img1.jpg",
+            "./assets/imagenes/hombres/img1.jpg",
+            "./assets/imagenes/hombres/img1.jpg",
+          ]
         },
         {
-          "nombre": "Hoddies",
-          "precio_neg": 55.00,
-          "precio": 45.99,
-          "color": "Azul",
-          "talla": "32",
-          "img": "./assets/imagenes/img2.jpg"
+          "nombre": "Calentador para caballeros",
+          "precio_neg": 35,
+          "precio": 35,
+          "color": "Blanco",
+          "talla": "S-M-L",
+          "imgenes": [
+            "./assets/imagenes/hombres/img2.jpg",
+            "./assets/imagenes/hombres/img2.jpg",
+            "./assets/imagenes/hombres/img2.jpg",
+            "./assets/imagenes/hombres/img2.jpg",
+          ]
         },
         {
-          "nombre": "Hoddies",
-          "precio_neg": 55.00,
-          "precio": 45.99,
-          "color": "Azul",
-          "talla": "32",
-          "img": "./assets/imagenes/img2.jpg"
+          "nombre": "Calentador para caballeros",
+          "precio_neg": 35,
+          "precio": 35,
+          "color": "Blanco",
+          "talla": "S-M-L",
+          "imgenes": [
+            "./assets/imagenes/hombres/img3.jpg",
+            "./assets/imagenes/hombres/img3.jpg",
+            "./assets/imagenes/hombres/img3.jpg",
+            "./assets/imagenes/hombres/img3.jpg",
+          ]
         },
         {
-          "nombre": "Hoddies",
-          "precio_neg": 55.00,
-          "precio": 45.99,
-          "color": "Azul",
-          "talla": "32",
-          "img": "./assets/imagenes/img2.jpg"
+          "nombre": "Calentador para caballeros",
+          "precio_neg": 35,
+          "precio": 35,
+          "color": "Blanco",
+          "talla": "S-M-L",
+          "imgenes": [
+            "./assets/imagenes/hombres/img4.jpg",
+            "./assets/imagenes/hombres/img4.jpg",
+            "./assets/imagenes/hombres/img4.jpg",
+            "./assets/imagenes/hombres/img4.jpg",
+          ]
         },
         {
-          "nombre": "Hoddies",
-          "precio_neg": 55.00,
-          "precio": 45.99,
-          "color": "Azul",
-          "talla": "32",
-          "img": "./assets/imagenes/img2.jpg"
+          "nombre": "Calentador para caballeros",
+          "precio_neg": 35,
+          "precio": 35,
+          "color": "Blanco",
+          "talla": "S-M-L",
+          "imgenes": [
+            "./assets/imagenes/hombres/img5.jpg",
+            "./assets/imagenes/hombres/img5.jpg",
+            "./assets/imagenes/hombres/img5.jpg",
+            "./assets/imagenes/hombres/img5.jpg",
+          ]
         },
         {
-          "nombre": "Hoddies",
-          "precio_neg": 55.00,
-          "precio": 45.99,
-          "color": "Azul",
-          "talla": "32",
-          "img": "./assets/imagenes/img2.jpg"
+          "nombre": "Calentador para caballeros",
+          "precio_neg": 35,
+          "precio": 35,
+          "color": "Blanco",
+          "talla": "S-M-L",
+          "imgenes": [
+            "./assets/imagenes/hombres/img6.jpg",
+            "./assets/imagenes/hombres/img6.jpg",
+            "./assets/imagenes/hombres/img6.jpg",
+            "./assets/imagenes/hombres/img6.jpg",
+          ]
+        },{
+          "nombre": "Hoddie para caballeros",
+          "precio_neg": 35,
+          "precio": 23,
+          "color": "Blanco",
+          "talla": "S-M-L",
+          "imgenes": [
+            "./assets/imagenes/hombres/img7.jpg",
+            "./assets/imagenes/hombres/img7.jpg",
+            "./assets/imagenes/hombres/img7.jpg",
+            "./assets/imagenes/hombres/img7.jpg",
+          ]
         },
         // Otros productos...
       ]
@@ -67,90 +109,256 @@ export class ProductsComponent {
       "categoria": "Mujer",
       "productos": [
         {
-          "nombre": "Hoddie con estampado",
+          "nombre": "Buzos para dama",
           "precio_neg": 18,
           "precio": 23,
           "color": "Negro",
-          "talla": "S",
-          "img": "./assets/imagenes/img18.jpg"
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-b-16.jpg",
+            "./assets/imagenes/mujeres/img-b-16.jpg",
+            "./assets/imagenes/mujeres/img-b-16.jpg",
+            "./assets/imagenes/mujeres/img-b-16.jpg",
+          ]
         },
         {
-          "nombre": "Hoddie llano",
+          "nombre": "Buzos para dama",
           "precio_neg": 18,
           "precio": 23,
           "color": "Negro",
-          "talla": "S",
-          "img": "./assets/imagenes/oficiales/img1.png"
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img11.jpg",
+            "./assets/imagenes/mujeres/img11.jpg",
+            "./assets/imagenes/mujeres/img11.jpg",
+            "./assets/imagenes/mujeres/img11.jpg",
+          ]
+        },
+        {
+          "nombre": "Buzos para dama",
+          "precio_neg": 18,
+          "precio": 23,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img12.jpg",
+            "./assets/imagenes/mujeres/img12.jpg",
+            "./assets/imagenes/mujeres/img12.jpg",
+            "./assets/imagenes/mujeres/img12.jpg",
+          ]
+        },
+        {
+          "nombre": "Buzos para dama",
+          "precio_neg": 18,
+          "precio": 23,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img14.jpg",
+            "./assets/imagenes/mujeres/img14.jpg",
+            "./assets/imagenes/mujeres/img14.jpg",
+            "./assets/imagenes/mujeres/img14.jpg",
+          ]
+        },
+        {
+          "nombre": "Buzos para dama",
+          "precio_neg": 18,
+          "precio": 23,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img15.jpg",
+            "./assets/imagenes/mujeres/img15.jpg",
+            "./assets/imagenes/mujeres/img15.jpg",
+            "./assets/imagenes/mujeres/img15.jpg",
+          ]
+        },
+        {
+          "nombre": "Buzos para dama",
+          "precio_neg": 18,
+          "precio": 23,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img17.jpg",
+            "./assets/imagenes/mujeres/img17.jpg",
+            "./assets/imagenes/mujeres/img17.jpg",
+            "./assets/imagenes/mujeres/img17.jpg",
+          ]
+        },
+        {
+          "nombre": "Buzos para dama",
+          "precio_neg": 18,
+          "precio": 23,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img18.jpg",
+            "./assets/imagenes/mujeres/img18.jpg",
+            "./assets/imagenes/mujeres/img18.jpg",
+            "./assets/imagenes/mujeres/img18.jpg",
+          ]
+        },
+        {
+          "nombre": "Buzos para dama",
+          "precio_neg": 18,
+          "precio": 23,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-b-1.jpg",
+            "./assets/imagenes/mujeres/img-b-2.jpg",
+            "./assets/imagenes/mujeres/img-b-3.jpg",
+            "./assets/imagenes/mujeres/img-b-4.jpg",
+          ]
+        },
+        {
+          "nombre": "Buzos para dama",
+          "precio_neg": 18,
+          "precio": 23,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-b-5.jpg",
+            "./assets/imagenes/mujeres/img-b-6.jpg",
+            "./assets/imagenes/mujeres/img-b-7.jpg",
+            "./assets/imagenes/mujeres/img-b-8.jpg",
+          ]     
         }, 
         {
-          "nombre": "Hoddie llano",
+          "nombre": "Buzos para dama",
           "precio_neg": 18,
           "precio": 23,
           "color": "Negro",
-          "talla": "M",
-          "img": "./assets/imagenes/oficiales/img2.png"
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-b-13.jpg",
+            "./assets/imagenes/mujeres/img-b-9.jpg",
+            "./assets/imagenes/mujeres/img-b-14.jpg",
+            "./assets/imagenes/mujeres/img-b-15.jpg",
+          ]
         },
         {
-          "nombre": "Hoddie llano",
+          "nombre": "Buzos para dama",
           "precio_neg": 18,
           "precio": 23,
           "color": "Negro", 
-          "talla": "M",
-          "img": "./assets/imagenes/oficiales/img1.png"
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-b-10.jpg",
+            "./assets/imagenes/mujeres/img-b-11.jpg",
+            "./assets/imagenes/mujeres/img-b-12.jpg",
+            "./assets/imagenes/mujeres/img-b-12.jpg",
+          ]
+        },      {
+          "nombre": "Calentador para dama",
+          "precio_neg": 18,
+          "precio": 35,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-c-1.jpg",
+            "./assets/imagenes/mujeres/img-c-1.jpg",
+            "./assets/imagenes/mujeres/img-c-1.jpg",
+            "./assets/imagenes/mujeres/img-c-1.jpg",
+          ]
         },
-        // Otros productos...
+        {
+          "nombre": "Calentador para dama",
+          "precio_neg": 18,
+          "precio": 35,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-c-2.jpg",
+            "./assets/imagenes/mujeres/img-c-2.jpg",
+            "./assets/imagenes/mujeres/img-c-2.jpg",
+            "./assets/imagenes/mujeres/img-c-2.jpg",
+          ]
+        },
+        {
+          "nombre": "Calentador para dama",
+          "precio_neg": 18,
+          "precio": 35,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-c-3.jpg",
+            "./assets/imagenes/mujeres/img-c-3.jpg",
+            "./assets/imagenes/mujeres/img-c-3.jpg",
+            "./assets/imagenes/mujeres/img-c-3.jpg",
+          ]
+        },
+        {
+          "nombre": "Calentador para dama",
+          "precio_neg": 18,
+          "precio": 35,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-c-4.jpg",
+            "./assets/imagenes/mujeres/img-c-4.jpg",
+            "./assets/imagenes/mujeres/img-c-4.jpg",
+            "./assets/imagenes/mujeres/img-c-4.jpg",
+          ]
+        },
+        {
+          "nombre": "Calentador para dama",
+          "precio_neg": 18,
+          "precio": 35,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-c-5.jpg",
+            "./assets/imagenes/mujeres/img-c-5.jpg",
+            "./assets/imagenes/mujeres/img-c-5.jpg",
+            "./assets/imagenes/mujeres/img-c-5.jpg",
+          ]
+        },
+        {
+          "nombre": "Calentador para dama",
+          "precio_neg": 18,
+          "precio": 35,
+          "color": "Negro",
+          "talla": "S-M",
+          "imgenes": [
+            "./assets/imagenes/mujeres/img-c-6.jpg",
+            "./assets/imagenes/mujeres/img-c-6.jpg",
+            "./assets/imagenes/mujeres/img-c-6.jpg",
+            "./assets/imagenes/mujeres/img-c-6.jpg",
+          ]
+        },
+
       ]
     },
     {
       "categoria": "Ninos",
       "productos": [
         {
-          "nombre": "Hoddie",
+          "nombre": "Hoddie para niños",
           "precio_neg": 19,
-          "precio": 25,
+          "precio": 20,
           "color": "Gris",
-          "talla": "S",
-          "img": "./assets/imagenes/img8.jpg"
+          "talla": "XS-S",
+          "imgenes": [
+            "./assets/imagenes/ninos/img1.jpg",
+            "./assets/imagenes/ninos/img2.jpg",
+            "./assets/imagenes/ninos/img1.jpg",
+            "./assets/imagenes/ninos/img2.jpg",
+          ]
         },
         {
-          "nombre": "Hoddie",
+          "nombre": "Hoddie para niños",
           "precio_neg": 19,
-          "precio": 25,
-          "color": "Negro",
-          "talla": "S",
-          "img": "./assets/imagenes/img10.jpg"
-        },
-        {
-          "nombre": "Hoddie",
-          "precio_neg": 19,
-          "precio": 25,
-          "color": "Celeste",
-          "talla": "S",
-          "img": "./assets/imagenes/img14.jpg"
-        },
-        {
-          "nombre": "Hoddie",
-          "precio_neg": 19,
-          "precio": 25,
-          "color": "Negro",
-          "talla": "S",
-          "img": "./assets/imagenes/img15.jpg"
-        },
-        {
-          "nombre": "Hoddie",
-          "precio_neg": 19,
-          "precio": 25,
+          "precio": 20,
           "color": "Gris",
-          "talla": "S",
-          "img": "./assets/imagenes/img16.jpg"
-        },
-        {
-          "nombre": "Hoddie",
-          "precio_neg": 19,
-          "precio": 25,
-          "color": "Celeste",
-          "talla": "S",
-          "img": "./assets/imagenes/img17.jpg"
+          "talla": "XS-S",
+          "imgenes": [
+            "./assets/imagenes/ninos/img3.jpg",
+            "./assets/imagenes/ninos/img3.jpg",
+            "./assets/imagenes/ninos/img3.jpg",
+            "./assets/imagenes/ninos/img3.jpg",
+          ]
         },
         // Otros productos...
       ]
@@ -163,7 +371,13 @@ export class ProductsComponent {
     "precio": 0,
     "color": "",
     "talla": "",
-    "img": ""
+    "imgenes": [
+      "",
+      "",
+      "",
+      "",
+
+    ]
   }
   
   constructor() {}
@@ -201,5 +415,11 @@ export class ProductsComponent {
     this.isVisible = false;
   }
   
+  changeImgSelected(indice:any): void {
+    console.log(indice)
+    var aux = this.producto_modal.imgenes[0]
+    this.producto_modal.imgenes[0] = this.producto_modal.imgenes[indice] 
+    this.producto_modal.imgenes[indice] = aux
+  }
 
 }

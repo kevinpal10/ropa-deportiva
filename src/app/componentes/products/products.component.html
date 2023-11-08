@@ -20,22 +20,30 @@
         <div  class="row"  id="container">
             <div (click)="showModal(producto)" *ngFor = "let producto of item.productos" class="subcontainer col-lg-2 col-md-3 col-sm-3 col-xs-12">
                 <div class="product">
-                    <img src="{{producto.img}}" alt="" >
+                    <img src="{{producto.imgenes[0]}}" alt="" >
                     <h6>{{producto.nombre}}</h6>
                     <ul>
-                        <li>color: {{producto.color}}</li>
+                        <!-- <li>color: {{producto.color}}</li> -->
                         <li>precio unidad: {{producto.precio}}</li>
-                        <li>precio negocio: {{producto.precio_neg}}</li>
+                        <!-- <li>precio negocio: {{producto.precio_neg}}</li> -->
                         <li>talla: {{producto.talla}}</li>
-                        <li>color: {{producto.color}}</li>
+                        <!-- <li>color: {{producto.color}}</li> -->
                     </ul>
                 </div> 
             </div>
         </div>
-        <nz-modal id="modal" [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+        <nz-modal id="modal" [(nzVisible)]="isVisible" nzTitle="{{producto_modal.nombre}}" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
             <ng-container *nzModalContent >
-                <img id="imagen_modal" src="{{producto_modal.img}}" alt="">
+                <div nz-row  class="modal-content">
+                    <div nz-col nzSpan="24" class="imagen">
+                        <img id="imagen_modal" src="{{producto_modal.imgenes[0]}}" alt="">
+                    </div>
+                    <div nz-col nzSpan="24"  class="imagenes">
+                        <div class="img" *ngFor="let imagen of producto_modal.imgenes; let i = index"><img (click)="changeImgSelected(i)" src="{{imagen}}" alt=""></div>
+                    </div>
+                </div>
             </ng-container>
         </nz-modal>
+        
     </div>
 </section>

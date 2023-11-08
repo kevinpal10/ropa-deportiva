@@ -10,15 +10,15 @@ export class ClientesComponent {
 
 comments = [
   {
-    "img": "./assets/imagenes/img11.jpg",
+    "img": "./assets/imagenes/img15.jpg",
     "comment":"Excelente! Muy recomendado"
   },
   {
-    "img": "./assets/imagenes/img11.jpg",
+    "img": "./assets/imagenes/img15.jpg",
     "comment":"Me siento comoda, hecho a mi medida! "
   },
   {
-    "img": "./assets/imagenes/img11.jpg",
+    "img": "./assets/imagenes/img15.jpg",
     "comment":"Excelente servicio, 5 estrellas!"
   },
 ]

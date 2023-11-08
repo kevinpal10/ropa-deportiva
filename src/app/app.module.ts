@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 registerLocaleData(en);
 
@@ -45,7 +46,8 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     NzTabsModule,
     NzModalModule,
-    NzButtonModule
+    NzButtonModule,
+    NzGridModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

@@ -60,11 +60,14 @@ footer #container .redes .info ul li{
 }
 
 
-
-.develop{ 
+#footer h6{ 
 	color:#fff;
 	text-align: center;
 	width: 100%;
+}
+
+#footer h6 :hover{
+	color: rgb(0, 174, 255);
 }
 
 section #services {
