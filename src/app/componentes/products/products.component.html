@@ -43,7 +43,11 @@
                     </div>
                 </div>
             </ng-container>
+            <div *nzModalFooter>
+                <button nz-button nzType="default" (click)="handleCancel()">Cancelar</button>
+                <button nz-button nzType="primary" (click)="handleOk()" >Agregar al carrito</button>
+            </div>
         </nz-modal>
-        
+
     </div>
 </section>

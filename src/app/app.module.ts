@@ -22,6 +22,7 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { SobreNosotrosComponent } from './componentes/sobre-nosotros/sobre-nosotros.component';
 
 registerLocaleData(en);
 
@@ -36,7 +37,8 @@ registerLocaleData(en);
     ClientesComponent,
     CategoriaPrendasComponent,
     CatalogoComponent,
-    BuscarProductoComponent
+    BuscarProductoComponent,
+    SobreNosotrosComponent
   ],
   imports: [
     BrowserModule,

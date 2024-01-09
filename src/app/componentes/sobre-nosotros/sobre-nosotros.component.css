@@ -1,0 +1,18 @@
+.about-us{
+    background-color: rgba(255, 228, 196, 0.297);
+}
+
+.encabezado{
+    background-color: rgb(116, 30, 30);
+    width: 100%;
+    padding: 20px;
+}
+
+.about-us .container{
+    padding: 40px;
+}
+
+.about-us .container h1{
+    padding: 20px;
+    text-align: center;
+}
