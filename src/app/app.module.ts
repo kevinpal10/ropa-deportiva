@@ -22,6 +22,9 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { AgregarProductoComponent } from './paginas/agregar-producto/agregar-producto.component';
+import { NuevoProductoFormComponent } from './componentes/nuevo-producto-form/nuevo-producto-form.component';
+
 
 registerLocaleData(en);
 
@@ -36,7 +39,9 @@ registerLocaleData(en);
     ClientesComponent,
     CategoriaPrendasComponent,
     CatalogoComponent,
-    BuscarProductoComponent
+    BuscarProductoComponent,
+    AgregarProductoComponent,
+    NuevoProductoFormComponent
   ],
   imports: [
     BrowserModule,

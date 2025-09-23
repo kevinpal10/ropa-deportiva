@@ -9,25 +9,24 @@
     </div>
 
     <nz-tabset nzCentered>
-        <nz-tab nzTitle="Todo" (nzClick)="changeDates('t')"></nz-tab>
-        <nz-tab nzTitle="Hombre" (nzClick)="changeDates('h')"></nz-tab>
-        <nz-tab nzTitle="Mujer" (nzClick)="changeDates('m')"></nz-tab>
-        <nz-tab nzTitle="Niño/a" (nzClick)="changeDates('n')"></nz-tab>
+        <nz-tab nzTitle="Todo" (nzClick)="changeDates('todo')"></nz-tab>
+        <nz-tab nzTitle="Hombre" (nzClick)="changeDates('hombres')"></nz-tab>
+        <nz-tab nzTitle="Mujer" (nzClick)="changeDates('mujeres')"></nz-tab>
+        <nz-tab nzTitle="Niño/a" (nzClick)="changeDates('niños')"></nz-tab>
     </nz-tabset>
       
-    <div *ngFor = "let item of productos_aux" class="categorias">
-        <h3>{{item.categoria}}</h3>
+    <div class="categorias">
         <div  class="row"  id="container">
-            <div (click)="showModal(producto)" *ngFor = "let producto of item.productos" class="subcontainer col-lg-2 col-md-3 col-sm-3 col-xs-12">
+            <div (click)="showModal(producto)" *ngFor = "let producto of productos_aux" class="subcontainer col-lg-2 col-md-3 col-sm-3 col-xs-12">
                 <div class="product">
-                    <img src="{{producto.imgenes[0]}}" alt="" >
+                    <img src="{{producto.imagen}}" alt="" >
                     <h6>{{producto.nombre}}</h6>
                     <ul>
-                        <!-- <li>color: {{producto.color}}</li> -->
-                        <li>precio unidad: {{producto.precio}}</li>
-                        <!-- <li>precio negocio: {{producto.precio_neg}}</li> -->
-                        <li>talla: {{producto.talla}}</li>
-                        <!-- <li>color: {{producto.color}}</li> -->
+                        <li>Precio unidad: ${{producto.precio}}</li>
+                        <li>Talla: {{producto.talla}}</li>
+                        <li>Stock: {{producto.stock}}</li>
+                        <li>Categoria: {{producto.categoria}}</li>
+                        <li>Descripción: {{producto.descripcion}}</li>
                     </ul>
                 </div> 
             </div>
@@ -36,10 +35,7 @@
             <ng-container *nzModalContent >
                 <div nz-row  class="modal-content">
                     <div nz-col nzSpan="24" class="imagen">
-                        <img id="imagen_modal" src="{{producto_modal.imgenes[0]}}" alt="">
-                    </div>
-                    <div nz-col nzSpan="24"  class="imagenes">
-                        <div class="img" *ngFor="let imagen of producto_modal.imgenes; let i = index"><img (click)="changeImgSelected(i)" src="{{imagen}}" alt=""></div>
+                        <img id="imagen_modal" src="{{producto_modal.imagen}}" alt="">
                     </div>
                 </div>
             </ng-container>

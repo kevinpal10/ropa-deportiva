@@ -38,13 +38,11 @@
 	display: flex !important;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(127, 255, 212, 0.101);
 }
 
 .ant-modal-body .imagen img{
     max-height: 350px;
     max-width: 300px;
-	border-radius: 20px;
 }  
 
 @media (max-width: 520px) {

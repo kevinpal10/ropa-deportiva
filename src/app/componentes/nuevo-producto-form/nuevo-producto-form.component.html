@@ -1,0 +1,40 @@
+<section class="cuerpo">
+    <div class="container-formulario">
+        <form action="#" #formulario="ngForm"  method="post" (ngSubmit)="cargar_producto()">
+            <div class="form-group">
+                <label for="nombres">Nombre producto:</label>
+                <input type="text" id="nombres" name="nombres" [(ngModel)]="producto.nombre" placeholder="Ejemplo: Pantalon deportivo" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Talla:</label>
+                <input type="text" id="telefono" name="telefono" [(ngModel)]="producto.talla" placeholder="Ejemplo: M, S, L" required>
+            </div>
+            <div class="form-group">
+                <label for="edad">Stock:</label>
+                <input type="number" id="edad" name="edad" [(ngModel)]="producto.stock" placeholder="Ejemplo: 30" required>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" [(ngModel)]="producto.precio" placeholder="Ejemplo: 30" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoria:</label>
+                <input type="text" id="categoria" name="categoria" [(ngModel)]="producto.categoria" placeholder="Ejemplo: Hoddies, Pantalones, Camisetas" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_persona">Sexo:</label>
+                <input type="text" id="tipo_persona" name="tipo_persona" [(ngModel)]="producto.tipo_persona" placeholder="Ejemplo: Hombre o Mujer" required>
+            </div>
+            <div class="form-group">
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen" [(ngModel)]="producto.imagen" (change)="onFileSelected($event)" name="imagen" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" [(ngModel)]="producto.descripcion" placeholder="Ejemplo: Breve descripción aquí" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+    </div>
+</section>

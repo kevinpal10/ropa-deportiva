@@ -41,6 +41,7 @@
 #products .categorias #container .product{
     /*background-color: rgba(250, 235, 215, 0.463);*/
     padding: 10px;
+    height: 100%    ;
     border: 1px rgb(151, 151, 151) groove;
     border-radius: 10px;
     background-size: cover;
@@ -71,6 +72,10 @@
 #products .categorias #container .subcontainer .product ul li{
     font-size: 12px;
     list-style: none;
+}
+
+#imagen_modal{
+    margin: 10px;
 }
 
 .search{

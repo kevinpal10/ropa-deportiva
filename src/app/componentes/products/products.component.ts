@@ -1,13 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Producto, ProductoService } from 'src/app/services/producto/producto.service';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
 
+  productos: Producto[] = [];
+  productos_aux: Producto[] = [];
   isVisible = false;
+
+
+  ngOnInit(): void {
+    this.productoService.getProductos().subscribe(data => {
+      this.productos = data;
+      this.productos_aux = this.productos
+      console.log(this.productos);
+    });
+  }
+
+  constructor(
+    private productoService: ProductoService
+  ) {}
+
   items_productos = [
     {
       "categoria": "Hombre",
@@ -364,62 +381,55 @@ export class ProductsComponent {
       ]
     }
   ]
-  productos_aux=this.items_productos
+
   producto_modal={
     "nombre": "",
     "precio_neg": 0,
     "precio": 0,
     "color": "",
     "talla": "",
-    "imgenes": [
-      "",
-      "",
-      "",
-      "",
-
-    ]
+    "imagen": ""
   }
   
-  constructor() {}
-  
+
+  // Método para cambiar la categoría de productos
   changeDates(cadena:string):void{
     switch(cadena) {
-      case 't':
-        this.productos_aux = this.items_productos
+      case 'todo':
+        this.productos_aux = this.productos
         break;
-      case 'm':
-        this.productos_aux = this.items_productos.filter(item => item.categoria === 'Mujer')
+      case 'mujeres':
+        this.productos_aux = this.productos.filter(item => item.tipo_persona === 'Mujer')
         break
-      case 'h':
-        this.productos_aux = this.items_productos.filter(item => item.categoria === 'Hombre')
+      case 'hombres':
+        this.productos_aux = this.productos.filter(item => item.tipo_persona === 'Hombre')
         break
-      case 'n':
-        this.productos_aux = this.items_productos.filter(item => item.categoria === 'Ninos')
+      case 'niños':
+        this.productos_aux = this.productos.filter(item => item.tipo_persona === 'Ninos')
         break
     }
   }
 
+  // Método para mostrar el modal con la información del producto
   showModal(producto:any): void {
     this.isVisible = true;
-    console.log(producto) 
     this.producto_modal = producto
   }
 
-  handleOk(): void {
-    console.log('Button ok clicked!');
+   handleOk(): void {
     this.isVisible = false;
   }
 
   handleCancel(): void {
-    console.log('Button cancel clicked!');
     this.isVisible = false;
   }
   
+/*
   changeImgSelected(indice:any): void {
     console.log(indice)
     var aux = this.producto_modal.imgenes[0]
     this.producto_modal.imgenes[0] = this.producto_modal.imgenes[indice] 
     this.producto_modal.imgenes[indice] = aux
-  }
+  } */
 
 }
