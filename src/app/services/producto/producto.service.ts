@@ -20,7 +20,7 @@ export interface Producto {
 
 
 export class ProductoService {
-  private apiUrl = 'https://back-ropa-deportiva.onrender.com/api/productos/';
+  private apiUrl = 'https://18.218.140.13/api/productos/';
 
   constructor(private http: HttpClient) {}
 
