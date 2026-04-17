@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label for="imagen">Imagen:</label>
-                <input type="file" id="imagen" [(ngModel)]="producto.imagen" (change)="onFileSelected($event)" name="imagen" required>
+                <input type="file" id="imagen" (change)="onFileSelected($event)" name="imagen" required>
             </div>
             <div class="form-group">
                 <label for="descripcion">Descripción:</label>
