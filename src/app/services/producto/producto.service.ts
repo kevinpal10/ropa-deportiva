@@ -47,10 +47,8 @@ export class ProductoService {
     return this.http.get<Producto[]>(this.apiUrl);
   }
 
-  crearProducto(producto: Producto): Observable<Producto> {
-    const formData = this.productoToFormData(producto)
-    console.log('FormData creado:', formData);
-    return this.http.post<Producto>(this.apiUrl, formData);
+  crearProducto(data: any): Observable<Producto> {
+    return this.http.post<Producto>(this.apiUrl, data);
   }
 
   eliminarProducto(id: number): Observable<any> {

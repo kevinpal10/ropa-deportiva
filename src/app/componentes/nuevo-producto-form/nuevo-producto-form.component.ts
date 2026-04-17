@@ -35,8 +35,21 @@ export class NuevoProductoFormComponent {
 
 
   cargar_producto(){
-    this.producto.imagen = this.archivoSeleccionado || undefined; // Asignar el archivo seleccionado al producto
-    this.productoService.crearProducto(this.producto).subscribe({
+
+    const formData = new FormData();
+    formData.append('nombre', this.producto.nombre);
+    formData.append('descripcion', this.producto.descripcion);
+    formData.append('precio', this.producto.precio.toString());
+    formData.append('talla', this.producto.talla);
+    formData.append('stock', this.producto.stock.toString());
+    formData.append('categoria', this.producto.categoria);
+    formData.append('tipo_persona', this.producto.tipo_persona);
+
+    if (this.archivoSeleccionado) {
+      formData.append('imagen', this.archivoSeleccionado);
+    }
+
+    this.productoService.crearProducto(formData).subscribe({
       next: (response) => {
         console.log('Producto creado:', response);
         alert('Producto creado exitosamente');
@@ -46,6 +59,18 @@ export class NuevoProductoFormComponent {
         alert('Error al crear el producto');
       }
     });
+
+    // this.producto.imagen = this.archivoSeleccionado || undefined; // Asignar el archivo seleccionado al producto
+    // this.productoService.crearProducto(this.producto).subscribe({
+    //   next: (response) => {
+    //     console.log('Producto creado:', response);
+    //     alert('Producto creado exitosamente');
+    //   },
+    //   error: (error) => {
+    //     console.error('Error al crear el producto:', error);
+    //     alert('Error al crear el producto');
+    //   }
+    // });
 
   }
 }
