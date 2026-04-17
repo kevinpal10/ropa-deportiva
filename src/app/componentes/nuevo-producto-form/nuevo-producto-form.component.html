@@ -1,10 +1,13 @@
 <section class="cuerpo">
     <div class="container-formulario">
         <form action="#" #formulario="ngForm"  method="post" (ngSubmit)="cargar_producto()">
+            
             <div class="form-group">
                 <label for="nombres">Nombre producto:</label>
                 <input type="text" id="nombres" name="nombres" [(ngModel)]="producto.nombre" placeholder="Ejemplo: Pantalon deportivo" required>
             </div>
+
+            <div class="form-group">
             <label for="talla">Talla:</label>
             <select id="talla" name="talla" [(ngModel)]="producto.talla" required>
                 <option value="" disabled selected>Selecciona talla</option>
@@ -16,45 +19,46 @@
                 <option value="Todas">Todas</option>
             </select>
             </div>
+
             <div class="form-group">
                 <label for="stock">Stock:</label>
                 <input type="number" id="stock" name="stock" [(ngModel)]="producto.stock" placeholder="Ejemplo: 30" required>
             </div>
+
             <div class="form-group">
                 <label for="precio">Precio:</label>
                 <input type="number" id="precio" name="precio" [(ngModel)]="producto.precio" placeholder="Ejemplo: 30" required>
             </div>
+
             <div class="form-group">
-            <label for="talla">Categoría:</label>
-            <select id="talla" name="talla" [(ngModel)]="producto.categoria" required>
-                <option value="" disabled selected>Selecciona categoría</option>
-                <option value="Hoddies">Hoddies</option>
-                <option value="Pantalones">Pantalones</option>
-                <option value="Camisetas">Camisetas</option>
-            </select>
+                <label for="talla">Categoría:</label>
+                <select id="talla" name="talla" [(ngModel)]="producto.categoria" required>
+                    <option value="" disabled selected>Selecciona categoría</option>
+                    <option value="Hoddies">Hoddies</option>
+                    <option value="Pantalones">Pantalones</option>
+                    <option value="Camisetas">Camisetas</option>
+                </select>
             </div>
+
             <div class="form-group">
-            <label for="talla">Género:</label>
-            <select id="talla" name="talla" [(ngModel)]="producto.tipo_persona" required>
-                <option value="" disabled selected>Selecciona género</option>
-                <option value="Hombre">Hombre</option>
-                <option value="Mujer">Mujer</option>
-            </select>
+                <label for="talla">Género:</label>
+                <select id="talla" name="talla" [(ngModel)]="producto.tipo_persona" required>
+                    <option value="" disabled selected>Selecciona género</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
             </div>
-            <div class="form-group">
-                <label for="imagen">Imagen:</label>
-                <input type="file" id="imagen" (change)="onFileSelected($event)" name="imagen" required>
-            </div>
-            <!-- <div class="form-group">
-                <label for="descripcion">Descripción:</label>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-            </select>
-            </div> -->
+
             <div class="form-group">
                 <label for="imagen">Imagen:</label>
                 <input type="file" id="imagen" (change)="onFileSelected($event)" name="imagen" required>
             </div>
+
+            <div class="form-group">
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen" (change)="onFileSelected($event)" name="imagen" required>
+            </div>
+
             <div class="form-group">
                 <label for="descripcion">Descripción:</label>
                 <textarea id="descripcion" name="descripcion" [(ngModel)]="producto.descripcion" placeholder="Ejemplo: Breve descripción aquí" rows="4" required></textarea>
