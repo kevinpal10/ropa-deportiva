@@ -20,7 +20,7 @@ export interface Producto {
 
 
 export class ProductoService {
-  private apiUrl = 'https://modaestilo-johnnysan.com/api/productos';
+  private apiUrl = 'https://modaestilo-johnnysan.com/api/productos/';
 
   constructor(private http: HttpClient) {}
 
