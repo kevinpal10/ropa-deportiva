@@ -19,7 +19,7 @@
         <div  class="row"  id="container">
             <div (click)="showModal(producto)" *ngFor = "let producto of productos_aux" class="subcontainer col-lg-2 col-md-3 col-sm-3 col-xs-12">
                 <div class="product">
-                    <img src="{{producto.imagen}}" alt="" >
+                    <img [src]="producto.imagen" alt="" >
                     <h6>{{producto.nombre}}</h6>
                     <ul>
                         <li>Precio unidad: ${{producto.precio}}</li>
