@@ -1,77 +1,110 @@
 #clientes{
-    width: 99%;
-    padding: 1%;
-}
-
-#clientes h3{
-    padding: 10px;
-    text-align: center;
-	font-family: 'Orbitron', sans-serif;
-}
-
-#clientes #container{
     width: 100%;
+    background-color: var(--bg);
+    padding: clamp(2.5rem, 5vw, 4rem) clamp(20px, 5vw, 64px);
+    border-top: 1px solid var(--line);
 }
 
-#clientes #container #subcontainer {
-    padding: 10px;
+.sec-eyebrow{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-#clientes #container #subcontainer #box{
-    border: 1px groove rgba(110, 110, 110, 0.549);
-    border-radius: 5px;
-    background-color: rgba(154, 255, 255, 0.127);
-    padding: 20px;
+#clientes .sec-title{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--text);
+    text-transform: uppercase;
+    margin: 0 0 2rem;
+    text-align: left;
+    padding: 0;
 }
 
-#clientes #container #subcontainer #box .imagen img{
+.cli-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.cli-card{
+    background-color: var(--bg2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.6rem;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.cli-card:hover{
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.cli-photo{
     width: 100%;
-    border-radius: 50%;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    background-color: var(--bg3);
 }
 
-#clientes #container #subcontainer #box .comment{
+.cli-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cli-stars{
     display: flex;
-    align-items: center;
+    gap: 3px;
+    margin-bottom: 0.8rem;
+    font-size: 16px;
 }
 
-#clientes #container #subcontainer #box .comment p{
-    margin: 0px;
+.cli-stars span{
+    color: var(--bg4);
 }
 
-@media (max-width: 570px) {
-    #clientes {
-        padding: 5px;
+.cli-stars span.on{
+    color: var(--accent);
+}
+
+.cli-comment{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.cli-name{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+}
+
+.cli-name::before{
+    content: "— ";
+    color: var(--accent);
+}
+
+@media (max-width: 880px) {
+    .cli-grid{
+        grid-template-columns: 1fr;
     }
 
-    #clientes #container #subcontainer{
-        width: 50%;
-        padding: 5px !important;
+    .cli-photo{
+        height: 260px;
     }
-
-    #clientes #container #subcontainer #box{
-        padding: 10px;
-        padding: 5px;
-    }
-
-    #clientes #container #subcontainer #box .comment{
-        width: 60%;
-        padding: 0px 5px;
-    }
-
-    #clientes #container #subcontainer #box .comment p{
-        font-size: 10px;
-    }
-
-    #clientes #container #subcontainer #box .imagen{
-        text-align: center;
-        padding: 2px;
-        width: 40%;
-    }
-
-    #clientes #container #subcontainer #box .imagen img{
-        width: 90%;
-        text-align: center;
-        margin-left: 7px;
-    }
-    
- }
+}

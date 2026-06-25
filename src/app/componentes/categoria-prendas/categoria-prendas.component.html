@@ -1,16 +1,21 @@
-<section class="categoria-prendas" id="categoria-prendas">
-    <h3>Productos</h3>
-    <div class="container-box">
-        <div class="container">
-            <div  *ngFor = "let prenda of categorias_prendas" id="hobbies-img">
-                <img src="{{prenda.img}}"  alt="">
-                <div class="hover-hobbies">
-                    <a href={{prenda.src}}>
-                        <span>{{prenda.name}}</span>
-                    </a>
-                </div>
-            </div>
-        </div>         
+<section class="cats" id="categoria-prendas">
+    <div class="sec-head-row">
+        <div>
+            <p class="sec-eyebrow">Explora</p>
+            <h2 class="sec-title">Categorías</h2>
+        </div>
+        <p class="sec-sub">Elige una categoría y descubre toda nuestra colección deportiva.</p>
     </div>
 
+    <div class="cats-grid">
+        <a *ngFor="let prenda of categorias_prendas; let i = index" [href]="prenda.src" class="cat-card">
+            <div class="cat-img" [style.background-image]="'url(' + prenda.img + ')'"></div>
+            <div class="cat-body">
+                <p class="cat-num">0{{ i + 1 }} —</p>
+                <p class="cat-name">{{ prenda.name }}</p>
+                <p class="cat-count">{{ prenda.count }}</p>
+                <span class="cat-go">Ver productos →</span>
+            </div>
+        </a>
+    </div>
 </section>

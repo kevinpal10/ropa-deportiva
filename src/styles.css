@@ -1,38 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/ng-zorro-antd/ng-zorro-antd.min.css";
 
+/* ===== Paleta y variables globales Trendy Style ===== */
+:root{
+	--bg:        #0d0e11;
+	--bg2:       #16171b;
+	--bg3:       #1e1f25;
+	--bg4:       #27292f;
+	--line:      rgba(255,255,255,0.08);
+	--line2:     rgba(255,255,255,0.14);
+	--text:      #f5f5f6;
+	--text2:     rgba(245,245,246,0.62);
+	--text3:     rgba(245,245,246,0.34);
+	--accent:    #3d8bff;
+	--accent-dim:#2f6dcc;
+	--accent-ink:#ffffff;
+}
+
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+body{
+	font-family: 'Inter', sans-serif;
+	background-color: var(--bg);
+	color: var(--text);
+}
 
-/*  {
-    text-align: center !important;
-} */
+/* ===== Modal ng-zorro en dark ===== */
+.ant-modal-content{
+	background-color: var(--bg2) !important;
+	border: 1px solid var(--line2) !important;
+	border-radius: 14px !important;
+	overflow: hidden;
+}
 
 .ant-modal-header{
+	background-color: var(--bg2) !important;
+	border-bottom: 1px solid var(--line) !important;
 	text-align: center !important;
+}
+
+.ant-modal-title{
+	color: var(--text) !important;
+	font-family: 'Space Grotesk', sans-serif !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.3px;
+}
+
+.ant-modal-close-icon{
+	color: var(--text2) !important;
 }
 
 .ant-modal-body .modal-content{
 	width: 100%;
 }
-
-.ant-modal-body .imagenes{
-	display: flex;
-	justify-content: center;
-	text-align: center !important;
-	background-color: rgba(250, 235, 215, 0.132);
-}
-
-.ant-modal-body .imagenes img{
-    max-height: 90px;
-    max-width: 50px;
-	margin: 5px;
-	text-align: center !important;
-}  
 
 .ant-modal-body .imagen{
 	display: flex !important;
@@ -41,16 +65,47 @@
 }
 
 .ant-modal-body .imagen img{
-    max-height: 350px;
-    max-width: 300px;
-}  
+	max-height: 350px;
+	max-width: 300px;
+	border-radius: 10px;
+}
+
+/* ===== Tabs ng-zorro en dark ===== */
+.ant-tabs{
+	color: var(--text2) !important;
+}
+
+.ant-tabs-tab{
+	color: var(--text2) !important;
+	font-family: 'Space Grotesk', sans-serif !important;
+	font-weight: 600 !important;
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+.ant-tabs-tab:hover{
+	color: var(--accent) !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+	color: var(--accent) !important;
+}
+
+.ant-tabs-ink-bar{
+	background: var(--accent) !important;
+}
+
+.ant-tabs-top > .ant-tabs-nav::before{
+	border-bottom: 1px solid var(--line) !important;
+}
 
 @media (max-width: 520px) {
 	.ant-modal-body .imagen img{
 		max-height: 300px;
 		max-width: 275px;
 		margin: 5px;
-	}  
+	}
 }
 
 @media (max-width: 300px) {
@@ -58,10 +113,5 @@
 		max-height: 200px;
 		max-width: 138px;
 		margin: 5px;
-	}  
-
-	.ant-modal-body .imagenes img{
-		max-height: 65px;
-		max-width: 30px;
-	}  
+	}
 }

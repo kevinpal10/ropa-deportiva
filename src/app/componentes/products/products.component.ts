@@ -11,12 +11,13 @@ export class ProductsComponent implements OnInit {
   productos: Producto[] = [];
   productos_aux: Producto[] = [];
   isVisible = false;
-
+  busqueda: string = '';
+  filtroActual: string = 'todo';
 
   ngOnInit(): void {
     this.productoService.getProductos().subscribe(data => {
       this.productos = data;
-      this.productos_aux = this.productos
+      this.productos_aux = this.productos;
       console.log(this.productos);
     });
   }
@@ -25,54 +26,67 @@ export class ProductsComponent implements OnInit {
     private productoService: ProductoService
   ) {}
 
-  producto_modal={
+  producto_modal: any = {
     "nombre": "",
     "precio_neg": 0,
     "precio": 0,
     "color": "",
     "talla": "",
+    "stock": 0,
+    "categoria": "",
+    "descripcion": "",
     "imagen": ""
-  }
-  
+  };
 
-  // Método para cambiar la categoría de productos
-  changeDates(cadena:string):void{
-    switch(cadena) {
-      case 'todo':
-        this.productos_aux = this.productos
-        break;
+  // Aplica filtro de categoría + búsqueda por texto
+  private aplicarFiltros(): void {
+    let base = this.productos;
+
+    switch (this.filtroActual) {
       case 'mujeres':
-        this.productos_aux = this.productos.filter(item => item.tipo_persona === 'Mujer')
-        break
+        base = base.filter(item => item.tipo_persona === 'Mujer');
+        break;
       case 'hombres':
-        this.productos_aux = this.productos.filter(item => item.tipo_persona === 'Hombre')
-        break
+        base = base.filter(item => item.tipo_persona === 'Hombre');
+        break;
       case 'niños':
-        this.productos_aux = this.productos.filter(item => item.tipo_persona === 'Ninos')
-        break
+        base = base.filter(item => item.tipo_persona === 'Ninos');
+        break;
     }
+
+    const texto = this.busqueda.trim().toLowerCase();
+    if (texto) {
+      base = base.filter(item =>
+        item.nombre.toLowerCase().includes(texto) ||
+        (item.categoria || '').toLowerCase().includes(texto)
+      );
+    }
+
+    this.productos_aux = base;
   }
 
-  // Método para mostrar el modal con la información del producto
-  showModal(producto:any): void {
+  // Cambia la categoría de productos (desde las pestañas)
+  changeDates(cadena: string): void {
+    this.filtroActual = cadena;
+    this.aplicarFiltros();
+  }
+
+  // Filtro por búsqueda de texto
+  filtrar(): void {
+    this.aplicarFiltros();
+  }
+
+  // Muestra el modal con la información del producto
+  showModal(producto: any): void {
     this.isVisible = true;
-    this.producto_modal = producto
+    this.producto_modal = producto;
   }
 
-   handleOk(): void {
+  handleOk(): void {
     this.isVisible = false;
   }
 
   handleCancel(): void {
     this.isVisible = false;
   }
-  
-/*
-  changeImgSelected(indice:any): void {
-    console.log(indice)
-    var aux = this.producto_modal.imgenes[0]
-    this.producto_modal.imgenes[0] = this.producto_modal.imgenes[indice] 
-    this.producto_modal.imgenes[indice] = aux
-  } */
-
 }

@@ -9,22 +9,23 @@ export class CategoriaPrendasComponent {
 
   categorias_prendas = [
     {
-      // "img":"./assets/imagenes/img11.jpg",
-      "img":"./assets/imagenes/categorias/resized_hoddie.jpg",
-      "name":"Hoddies",
-      "src":"./#/catalogo"
+      "img": "./assets/imagenes/categorias/resized_hoddie.jpg",
+      "name": "Hoddies",
+      "count": "Abriga con estilo",
+      "src": "./#/catalogo"
     },
     {
-      "img":"./assets/imagenes/categorias/resized_calentadores.jpg",
-      "name":"Calentadores",
-      "src":"./#/catalogo"
+      "img": "./assets/imagenes/categorias/resized_calentadores.jpg",
+      "name": "Calentadores",
+      "count": "Confort total",
+      "src": "./#/catalogo"
     },
-    { 
-      "img":"./assets/imagenes/categorias/resized_buzos.jpg",
-      "name":"Buzos",
-      "src":"./#/catalogo"
+    {
+      "img": "./assets/imagenes/categorias/resized_buzos.jpg",
+      "name": "Buzos",
+      "count": "Frescos y versátiles",
+      "src": "./#/catalogo"
     }
   ]
-
 
 }
