@@ -29,15 +29,18 @@
 
 .cli-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 }
 
 .cli-card{
     background-color: var(--bg2);
     border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 1.6rem;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
     transition: border-color 0.2s, transform 0.2s;
 }
 
@@ -47,11 +50,11 @@
 }
 
 .cli-photo{
-    width: 100%;
-    height: 220px;
-    border-radius: 10px;
+    flex: 0 0 88px;
+    width: 88px;
+    height: 88px;
+    border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 1.2rem;
     background-color: var(--bg3);
 }
 
@@ -62,11 +65,24 @@
     display: block;
 }
 
+.cli-body{
+    flex: 1;
+    min-width: 0;
+}
+
+.cli-name{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 0.3rem;
+}
+
 .cli-stars{
     display: flex;
-    gap: 3px;
-    margin-bottom: 0.8rem;
-    font-size: 16px;
+    gap: 1px;
+    margin-bottom: 0.5rem;
+    font-size: 12px;
 }
 
 .cli-stars span{
@@ -78,33 +94,32 @@
 }
 
 .cli-comment{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     color: var(--text2);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    font-style: italic;
-}
-
-.cli-name{
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
+    line-height: 1.5;
     margin: 0;
+    font-style: italic;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-.cli-name::before{
-    content: "— ";
-    color: var(--accent);
+@media (max-width: 1024px) {
+    .cli-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 760px) {
+    .cli-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
     .cli-grid{
         grid-template-columns: 1fr;
-    }
-
-    .cli-photo{
-        height: 260px;
     }
 }

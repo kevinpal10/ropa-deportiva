@@ -7,11 +7,13 @@
             <div class="cli-photo">
                 <img src="{{comment.img}}" alt="{{comment.nombre}}">
             </div>
-            <div class="cli-stars">
-                <span *ngFor="let llena of estrellas(comment.rating)" [class.on]="llena">★</span>
+            <div class="cli-body">
+                <p class="cli-name">{{comment.nombre}}</p>
+                <div class="cli-stars">
+                    <span *ngFor="let llena of estrellas(comment.rating)" [class.on]="llena">★</span>
+                </div>
+                <p class="cli-comment">{{comment.comment}}</p>
             </div>
-            <p class="cli-comment">{{comment.comment}}</p>
-            <p class="cli-name">{{comment.nombre}}</p>
         </div>
     </div>
 </section>

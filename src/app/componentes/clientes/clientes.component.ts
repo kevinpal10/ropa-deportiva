@@ -16,7 +16,7 @@ export class ClientesComponent {
     },
     {
       "nombre": "Valeria R.",
-      "img": "./assets/imagenes/mujeres/img11.jpg",
+      "img": "./assets/imagenes/mujeres/img15.jpg",
       "comment": "Me siento cómoda, hecho a mi medida. Los precios son muy accesibles.",
       "rating": 5
     },
